@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"hex/phoenix/config"
-	"hex/phoenix/handlers"
+	email_factory "hex/phoenix/factories"
 
 	"github.com/confluentinc/confluent-kafka-go/kafka"
 )
@@ -31,8 +31,7 @@ func StartConsumer() {
 
 		switch e := ev.(type) {
 		case *kafka.Message:
-			var newEmail handlers.Email
-			fmt.Printf("Message consumed: %+s\n", string(e.Value))
+			var newEmail email_factory.Email
 
 			err := json.Unmarshal(e.Value, &newEmail)
 
@@ -41,7 +40,7 @@ func StartConsumer() {
 				return
 			}
 
-			handlers.SendEmail(newEmail)
+			email_factory.NewEmail().Send(newEmail)
 		case *kafka.Error:
 			fmt.Printf("%+v\n", e)
 		}
