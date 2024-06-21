@@ -55,7 +55,7 @@ func (ef *EmailFactoryImpl) Send(
 		return err
 	}
 
-	fmt.Printf("Email sent successfully to %s\n", email.SenderAddress)
+	fmt.Printf("Email sent successfully to %s\n", email.ReceiverAddress)
 	return nil
 }
 
