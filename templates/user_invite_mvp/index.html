@@ -1,137 +1,72 @@
 <!DOCTYPE html>
 <html lang="{{.Lang}}">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<title>{{.Subject}}</title>
-	</head>
-
-	<body style='background-color: rgb(68, 66, 66);'>
-		<div
-			style="
-				background-color: #190d63 !important;
-				color: #fee9ff;
-				font-family: 'Onest', system-ui !important;
-				padding: 20px;
-				width: 100%;
-			"
-		>
-			<table
-				class="email-container"
-				style="
-					max-width: 800px;
-					margin: 0 auto;
-					padding: 20px;
-					box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-					background-color: #270f6e !important;
-					border-radius: 1.5rem;
-				font-family: 'Onest', system-ui;
-				"
-			>
-				<tr>
-					<td style="text-align: center; height: 30px">
-						<a
-							href="https://hex.santiagosaavedra.com.co"
-							style="
-								text-decoration: none;
-								display: block;
-								height: 8vh;
-				font-family: 'Onest', system-ui;
-				color: #fee9ff;
-							"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 292.46 98.13"
-								fill="currentColor"
-								style="height: 100%"
-							>
-								<path
-									d="M362.48 475.34h-6L419 377.21h6.13zm26.78-56.22l-3.07 4.71-29.71-46.62h6zm6.06-9.47l-3.06 4.77-23.72-37.21h6.07zm-20.71 65.69h-6l62.63-98.13h6zm12.13 0h-6.07l62.63-98.13h6.06zm14.58-75.16l-3 4.7-17.65-27.67h6zm-2.45 75.16h-6.14l62.7-98.13h6zm8.51-84.7l-3 4.77-11.66-18.2h6.14zm3.28 71.55l3.06-4.77 11.45 17.92H419zm6.06-9.47l3-4.77 17.51 27.39h-6.06zm6.07-9.54l3-4.7 23.51 36.86h-6zm6.06-9.47l3-4.77 29.57 46.4h-6zM169 377.21h28.42v36.12h29.39v-36.12h28.39v96.46h-28.42v-39.48h-29.39v39.48H169zM346.2 434.61h-44v18.06h49.14l-3.22 21h-73.04v-96.46H348v21h-45.76v15.54h44z"
-									className="cls-1"
-									transform="translate(-168.97 -377.21)"
-								></path>
-							</svg>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td style="text-align: center">
-						<h2 style="color: #cc69f8; font-size: 24px">{{.WelcomeMessage}}</h2>
-					</td>
-				</tr>
-				<tr>
-					<td style="padding: 20px; padding-bottom: 0">
-						<p style="font-size: 16px; line-height: 1.6; color: #fee9ff !important;">
-							{{.Greeting}} {{.RecipientName}}
-						</p>
-						<p style="font-size: 16px; line-height: 1.6; color: #fee9ff !important">
-							{{.Intro}}
-						</p>
-						<p style="font-size: 16px; line-height: 1.6; color: #fee9ff !important">
-							{{.Participation}}
-						</p>
-						<p style="font-size: 16px; line-height: 1.6; color: #fee9ff !important">
-							{{.Expectations}}
-						</p>
-						<ul style="font-size: 16px; line-height: 1.6; color: #fee9ff !important">
-							<li>{{.Benefit1}}</li>
-							<li>{{.Benefit2}}</li>
-							<li>{{.Benefit3}}</li>
-							<li>{{.Benefit4}}</li>
-						</ul>
-						<p style="font-size: 16px; line-height: 1.6; color: #fee9ff !important">
-							{{.ReachOut}}
-						</p>
-						<p style="font-size: 16px; line-height: 1.6; color: #fee9ff !important">
-							{{.WelcomeAboard}}
-						</p>
-						<p
-							style="
-								font-size: 16px;
-								line-height: 1.6;
-								color: #fee9ff !important;
-								margin-top: 20px;
-							"
-						>
-							{{.BestRegards}}
-						</p>
-						<p
-							style="
-								font-size: 16px;
-								line-height: 1.6;
-								color: #fee9ff !important;
-								font-weight: bold;
-							"
-						>
-							{{.Founders}}<br />{{.FoundersTitle}}
-						</p>
-					</td>
-				</tr>
-				<tr style="text-align: center">
-					<td>
-						<p style="font-size: 16px; line-height: 1.6">
-							<a
-								href="https://hex.santiagosaavedra.com.co/auth/signup?method=invite&user=hash"
-								style="
-									text-decoration: none;
-									background-color: #cc69f8;
-									padding: 8px 16px;
-									border-radius: 8px;
-									box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-									width: 30%;
-									color: #0d0830;
-								"
-								>{{.JoinUs}}</a
-							>
-						</p>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="color-scheme" content="light">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        @media (prefers-color-scheme: dark) {
+            .email-container, body, html {
+                background-color: #190d63 !important;
+								width: 100%;
+            }
+            p, li {
+                color: #fee9ff !important;
+            }
+            a {
+                color: #190d63 !important;
+                background-color: #cc69f8 !important;
+            }
+						a.image-link {
+							background-color: transparent !important;
+						}
+        }
+    </style>
+    <title>{{.Subject}}</title>
+</head>
+<body style='background-color: #190d63; max-width: 60%; height: 100%; box-sizing: content-box; margin: auto;'>
+    <div style="background-color: #190d63 !important; color: #fee9ff; font-family: 'Onest', system-ui !important; padding: 20px; width: 100%;">
+        <table class="email-container" style="max-width: 800px; margin: 0 auto; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #270f6e !important; border-radius: 1.5rem; font-family: 'Onest', system-ui;">
+            <tr>
+                <td style="text-align: center; height: 30px">
+                    <a href="https://hex.santiagosaavedra.com.co" style="text-decoration: none; display: block; height: 8vh; font-family: 'Onest', system-ui; color: #fee9ff;" class='image-link'>
+                        <img src="data:image/svg+xml;base64,CgkJCQkJCQk8c3ZnCgkJCQkJCQkJeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgoJCQkJCQkJCXZpZXdCb3g9IjAgMCAyOTIuNDYgOTguMTMiCgkJCQkJCQkJZmlsbD0iI2ZlZTlmZiIKCQkJCQkJCQlzdHlsZT0iaGVpZ2h0OiAxMDAlIgoJCQkJCQkJCWlkPSdoZXgtaXNvbG9nbycKCQkJCQkJCT4KCQkJCQkJCQk8cGF0aAoJCQkJCQkJCQlkPSJNMzYyLjQ4IDQ3NS4zNGgtNkw0MTkgMzc3LjIxaDYuMTN6bTI2Ljc4LTU2LjIybC0zLjA3IDQuNzEtMjkuNzEtNDYuNjJoNnptNi4wNi05LjQ3bC0zLjA2IDQuNzctMjMuNzItMzcuMjFoNi4wN3ptLTIwLjcxIDY1LjY5aC02bDYyLjYzLTk4LjEzaDZ6bTEyLjEzIDBoLTYuMDdsNjIuNjMtOTguMTNoNi4wNnptMTQuNTgtNzUuMTZsLTMgNC43LTE3LjY1LTI3LjY3aDZ6bS0yLjQ1IDc1LjE2aC02LjE0bDYyLjctOTguMTNoNnptOC41MS04NC43bC0zIDQuNzctMTEuNjYtMTguMmg2LjE0em0zLjI4IDcxLjU1bDMuMDYtNC43NyAxMS40NSAxNy45Mkg0MTl6bTYuMDYtOS40N2wzLTQuNzcgMTcuNTEgMjcuMzloLTYuMDZ6bTYuMDctOS41NGwzLTQuNyAyMy41MSAzNi44NmgtNnptNi4wNi05LjQ3bDMtNC43NyAyOS41NyA0Ni40aC02ek0xNjkgMzc3LjIxaDI4LjQydjM2LjEyaDI5LjM5di0zNi4xMmgyOC4zOXY5Ni40NmgtMjguNDJ2LTM5LjQ4aC0yOS4zOXYzOS40OEgxNjl6TTM0Ni4yIDQzNC42MWgtNDR2MTguMDZoNDkuMTRsLTMuMjIgMjFoLTczLjA0di05Ni40NkgzNDh2MjFoLTQ1Ljc2djE1LjU0aDQ0eiIKCQkJCQkJCQkJY2xhc3NOYW1lPSJjbHMtMSIKCQkJCQkJCQkJdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE2OC45NyAtMzc3LjIxKSIKCQkJCQkJCQk+PC9wYXRoPgoJCQkJCQkJPC9zdmc+Cg=="
+                            alt="hex-isologo" style="height: 100%" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center">
+                    <h2 style="color: #cc69f8; font-size: 24px">{{.WelcomeMessage}}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 20px; padding-bottom: 0">
+                    <p style="font-size: 16px; line-height: 1.6;">{{.Greeting}} {{.RecipientName}}</p>
+                    <p style="font-size: 16px; line-height: 1.6;">{{.Intro}}</p>
+                    <p style="font-size: 16px; line-height: 1.6;">{{.Participation}}</p>
+                    <p style="font-size: 16px; line-height: 1.6;">{{.Expectations}}</p>
+                    <ul style="font-size: 16px; line-height: 1.6;">
+                        <li>{{.Benefit1}}</li>
+                        <li>{{.Benefit2}}</li>
+                        <li>{{.Benefit3}}</li>
+                        <li>{{.Benefit4}}</li>
+                    </ul>
+                    <p style="font-size: 16px; line-height: 1.6;">{{.ReachOut}}</p>
+                    <p style="font-size: 16px; line-height: 1.6;">{{.WelcomeAboard}}</p>
+                    <p style="font-size: 16px; line-height: 1.6; margin-top: 20px;">{{.BestRegards}}</p>
+                    <p style="font-size: 16px; line-height: 1.6; font-weight: bold;">{{.Founders}}<br />{{.FoundersTitle}}</p>
+                </td>
+            </tr>
+            <tr style="text-align: center">
+                <td>
+                    <p style="font-size: 16px; line-height: 1.6;">
+                        <a href="https://hex.santiagosaavedra.com.co/auth/signup?method=invite&user=hash" style="text-decoration: none; background-color: #cc69f8; padding: 8px 16px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 30%; color: #0d0830;">{{.JoinUs}}</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
 </html>
